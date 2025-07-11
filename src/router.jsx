@@ -14,12 +14,12 @@ export const router = createHashRouter([{
             element: <UserPage/>
         },
         {
-            path:"/films/",
+            path:"films/",
             element:<HomePage/>,
             loader: getGenreFilms,
         },
         {
-            path:"/films/:film_id/",
+            path:"films/:film_id/",
             element: <DetailPage/>
         }
     ]
