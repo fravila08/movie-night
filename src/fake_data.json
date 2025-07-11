@@ -1,0 +1,212 @@
+[
+  {
+    "genre_title": "Action",
+    "films": [
+      {
+        "title": "Crimson Velocity",
+        "image": "https://placehold.co/300x450?text=Crimson+Velocity",
+        "description": "A rogue agent speeds through cyber-enhanced cities to clear his name."
+      },
+      {
+        "title": "Steel Reign",
+        "image": "https://placehold.co/300x450?text=Steel+Reign",
+        "description": "A military pilot must stop a doomsday weapon before it's too late."
+      },
+      {
+        "title": "Urban Titan",
+        "image": "https://placehold.co/300x450?text=Urban+Titan",
+        "description": "A genetically altered fighter protects his city from total collapse."
+      },
+      {
+        "title": "Echo Protocol",
+        "image": "https://placehold.co/300x450?text=Echo+Protocol",
+        "description": "An elite spy uncovers a betrayal inside his own agency."
+      },
+      {
+        "title": "Blackstrike",
+        "image": "https://placehold.co/300x450?text=Blackstrike",
+        "description": "A mercenary squad takes on a covert mission in hostile territory."
+      },
+      {
+        "title": "Terminal Raid",
+        "image": "https://placehold.co/300x450?text=Terminal+Raid",
+        "description": "Armed robbers and a former cop collide in a high-speed airport standoff."
+      },
+      {
+        "title": "Vortex Zone",
+        "image": "https://placehold.co/300x450?text=Vortex+Zone",
+        "description": "A time-traveling soldier battles in a collapsing multiverse."
+      },
+      {
+        "title": "Quantum Hit",
+        "image": "https://placehold.co/300x450?text=Quantum+Hit",
+        "description": "Assassins compete in a futuristic world run by algorithms."
+      },
+      {
+        "title": "Delta Siege",
+        "image": "https://placehold.co/300x450?text=Delta+Siege",
+        "description": "A unit is trapped behind enemy lines with dwindling supplies."
+      },
+      {
+        "title": "Velocity Burn",
+        "image": "https://placehold.co/300x450?text=Velocity+Burn",
+        "description": "An ex-racer returns for one final death-defying tournament."
+      },
+      {
+        "title": "Final Ascent",
+        "image": "https://placehold.co/300x450?text=Final+Ascent",
+        "description": "A mountaineer climbs into a warzone to rescue survivors."
+      },
+      {
+        "title": "Nightbound",
+        "image": "https://placehold.co/300x450?text=Nightbound",
+        "description": "Heists go wrong when a thief enters the underworld of shadows."
+      },
+      {
+        "title": "Phoenix Sector",
+        "image": "https://placehold.co/300x450?text=Phoenix+Sector",
+        "description": "Space marines uncover a conspiracy that threatens Earth."
+      },
+      {
+        "title": "Gunheart",
+        "image": "https://placehold.co/300x450?text=Gunheart",
+        "description": "An ex-hitman seeks redemption in a crime-ridden city."
+      },
+      {
+        "title": "Skyburn",
+        "image": "https://placehold.co/300x450?text=Skyburn",
+        "description": "Fighter jets and AI drones wage war in the skies."
+      },
+      {
+        "title": "Zero Divide",
+        "image": "https://placehold.co/300x450?text=Zero+Divide",
+        "description": "A programmer battles inside his creation to stop a cyber war."
+      },
+      {
+        "title": "Iron Hunt",
+        "image": "https://placehold.co/300x450?text=Iron+Hunt",
+        "description": "An armored warrior is hunted across a dystopian landscape."
+      },
+      {
+        "title": "Bullet Eclipse",
+        "image": "https://placehold.co/300x450?text=Bullet+Eclipse",
+        "description": "During a solar eclipse, assassins strike in the shadows."
+      },
+      {
+        "title": "Code Fury",
+        "image": "https://placehold.co/300x450?text=Code+Fury",
+        "description": "A cyber-soldier hacks into enemy lines to bring justice."
+      },
+      {
+        "title": "Darkshift",
+        "image": "https://placehold.co/300x450?text=Darkshift",
+        "description": "Reality bends as an agent warps between timelines to stop a bomb."
+      }
+    ]
+  },
+  {
+    "genre_title": "Horror",
+    "films": [
+      {
+        "title": "The Hollow Eyes",
+        "image": "https://placehold.co/300x450?text=The+Hollow+Eyes",
+        "description": "A remote cabin hides spirits that feed on forgotten memories."
+      },
+      {
+        "title": "Night of the Crow",
+        "image": "https://placehold.co/300x450?text=Night+of+the+Crow",
+        "description": "Cursed birds bring doom to a town that buried its past."
+      },
+      {
+        "title": "Harvest Moon",
+        "image": "https://placehold.co/300x450?text=Harvest+Moon",
+        "description": "When the moon turns red, the harvesters awaken for blood."
+      },
+      {
+        "title": "The Mourning Tree",
+        "image": "https://placehold.co/300x450?text=The+Mourning+Tree",
+        "description": "A tree in the backyard knows your worst nightmares."
+      },
+      {
+        "title": "Static",
+        "image": "https://placehold.co/300x450?text=Static",
+        "description": "A haunted radio broadcasts screams from another world."
+      },
+      {
+        "title": "Flesh and Fog",
+        "image": "https://placehold.co/300x450?text=Flesh+and+Fog",
+        "description": "A deadly mist traps survivors in a forest of shadows."
+      },
+      {
+        "title": "Deadlight Manor",
+        "image": "https://placehold.co/300x450?text=Deadlight+Manor",
+        "description": "A group investigates a mansion where the light dies first."
+      },
+      {
+        "title": "Blood Echo",
+        "image": "https://placehold.co/300x450?text=Blood+Echo",
+        "description": "Whispers lead a girl back to the asylum she once escaped."
+      },
+      {
+        "title": "Pale",
+        "image": "https://placehold.co/300x450?text=Pale",
+        "description": "A skinwalker stalks those who wander into the snow."
+      },
+      {
+        "title": "The Uninvited",
+        "image": "https://placehold.co/300x450?text=The+Uninvited",
+        "description": "A house party turns horrific when guests from the grave appear."
+      },
+      {
+        "title": "Whistle in the Dark",
+        "image": "https://placehold.co/300x450?text=Whistle+in+the+Dark",
+        "description": "Each whistle you hear brings the demon one step closer."
+      },
+      {
+        "title": "Dollmaker",
+        "image": "https://placehold.co/300x450?text=Dollmaker",
+        "description": "Children vanish as a cursed toymaker returns from exile."
+      },
+      {
+        "title": "Ghast",
+        "image": "https://placehold.co/300x450?text=Ghast",
+        "description": "A hospital hides a patient who was never alive to begin with."
+      },
+      {
+        "title": "Crimson Wake",
+        "image": "https://placehold.co/300x450?text=Crimson+Wake",
+        "description": "Boaters find themselves hunted by a drowned cult leader."
+      },
+      {
+        "title": "Needle",
+        "image": "https://placehold.co/300x450?text=Needle",
+        "description": "A cursed sewing kit ties the fate of three roommates together."
+      },
+      {
+        "title": "The House Below",
+        "image": "https://placehold.co/300x450?text=The+House+Below",
+        "description": "Beneath the house lies something that shouldn't be disturbed."
+      },
+      {
+        "title": "Scrawl",
+        "image": "https://placehold.co/300x450?text=Scrawl",
+        "description": "A journal writes itself—and it writes your end."
+      },
+      {
+        "title": "The Silence Tapes",
+        "image": "https://placehold.co/300x450?text=The+Silence+Tapes",
+        "description": "Lost tapes reveal the last moments of a vanished town."
+      },
+      {
+        "title": "Fogwood",
+        "image": "https://placehold.co/300x450?text=Fogwood",
+        "description": "A forest sealed off for years begins calling children by name."
+      },
+      {
+        "title": "Ashes",
+        "image": "https://placehold.co/300x450?text=Ashes",
+        "description": "A family’s ashes are haunted by the one who burned them."
+      }
+    ]
+  }
+]
