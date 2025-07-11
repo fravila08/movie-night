@@ -1,12 +1,12 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import UserPage from "./pages/UserPage";
 import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
 import { getGenreFilms } from "./utilities";
 
-export const router = createHashRouter([{
-    path:'/',
+export const router = createBrowserRouter([{
+    path:'movie-night/',
     element:<App/>,
     children:[
         {
