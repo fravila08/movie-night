@@ -6,7 +6,7 @@ import DetailPage from "./pages/DetailPage";
 import { getGenreFilms } from "./utilities";
 
 export const router = createBrowserRouter([{
-    path:'movie-night/',
+    path:'/movie-night/',
     element:<App/>,
     children:[
         {
