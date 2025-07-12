@@ -1,10 +1,10 @@
 import MovieIcon from "./MovieIcon";
 
 const MovieScroll = ({genre}) => {
-    const {genre_title, films} = genre
+    const {name, films} = genre
     return (
         <>
-        <h3>{genre_title}</h3>
+        <h3>{name}</h3>
         <div className="movie-scroll">
             {films.map((film)=>(
                 <MovieIcon film={film}/>

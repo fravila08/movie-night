@@ -17,8 +17,8 @@ function App() {
   }
 
   useEffect(()=>{
-    // handleUser()
-  },[user])
+    // TBDAuthentication()
+  },[])
 
   return (
     <>

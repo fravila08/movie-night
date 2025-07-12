@@ -3,7 +3,7 @@ import App from "./App";
 import UserPage from "./pages/UserPage";
 import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
-import { getGenreFilms } from "./utilities";
+import { getHomeGenreFilms, getMovieDetails } from "./utilities";
 
 export const router = createBrowserRouter([{
     path:'',
@@ -16,11 +16,15 @@ export const router = createBrowserRouter([{
         {
             path:"films/",
             element:<HomePage/>,
-            loader: getGenreFilms,
+            loader: getHomeGenreFilms,
         },
         {
             path:"films/:film_id/",
-            element: <DetailPage/>
+            element: <DetailPage/>,
+            loader: async({params})=>{
+                const {film_id} = params;
+                return await getMovieDetails(film_id)
+            }
         }
     ]
 }])
