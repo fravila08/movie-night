@@ -3,7 +3,8 @@ import App from "./App";
 import UserPage from "./pages/UserPage";
 import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
-import { getHomeGenreFilms, getMovieDetails } from "./utilities";
+import { getFilmsForGenre, getHomeGenreFilms, getMovieDetails } from "./utilities";
+import CategoryPage from "./pages/CategoryPage";
 
 export const router = createBrowserRouter([{
     path:'',
@@ -24,6 +25,14 @@ export const router = createBrowserRouter([{
             loader: async({params})=>{
                 const {film_id} = params;
                 return await getMovieDetails(film_id)
+            }
+        },
+        {
+            path:"genres/:genreId/",
+            element: <CategoryPage />,
+            loader: async({params})=> {
+                const {genreId} = params;
+                return await getFilmsForGenre(genreId)
             }
         }
     ]
