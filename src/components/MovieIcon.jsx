@@ -1,16 +1,26 @@
 import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const MovieIcon = ({film}) => {
-    const {title, poster_path} = film
+const MovieIcon = ({ film }) => {
+  const { title, poster_path } = film;
+  const navigate = useNavigate()
 
-    return(
-        <Card className="bg-dark text-white" style={{maxWidth:"10rem"}}>
-        <Card.Img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt="Card image" />
-        <Card.ImgOverlay style={{display:"flex", justifyContent:"center"}}>
-            <Card.Title>{title}</Card.Title>
-        </Card.ImgOverlay>
-        </Card>
-    )
-}
+  const handleClick = () =>{
+    navigate(`/films/${film.id}/`)
+  }
+
+  return (
+    <Card
+      className="bg-dark text-white"
+      onClick={handleClick}
+      style={{ minWidth: "20vmin", maxWidth: "20vmin" }}
+    >
+      <Card.Img
+        src={`https://image.tmdb.org/t/p/original/${poster_path}`}
+        alt="Card image"
+      />
+    </Card>
+  );
+};
 
 export default MovieIcon;

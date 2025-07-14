@@ -18,6 +18,11 @@ export const TBDAuthentication = async () => {
 };
 
 export const getGenres = async () => {
+  `
+  This function will return a list of objects {name, id} for each genre stored within
+  the TMDB API
+  https://developer.themoviedb.org/reference/genre-movie-list
+  `;
   const { data } = await api.get("genre/movie/list?language=en");
   return data.genres;
 };
@@ -26,30 +31,42 @@ export const getFilmsForGenre = async (genreId, pageNum = 1) => {
   `
   This function will grab a list of objects where each object will represent a movie matching the genre id that was passed in. It can also deal with pagination and the page is defaulted to 1
   https://developer.themoviedb.org/reference/discover-movie
-  `
+  `;
   const { data } = await api.get(
     `discover/movie?include_adult=true&include_video=true&language=en-US&page=${pageNum}&sort_by=popularity.desc&with_genres=${genreId}`
   );
-  return data.results;
+  return [data.results, data.total_pages];
 };
 
-export const getMovieDetails = async(movieId) =>{
-    `
+export const getMovieDetails = async (movieId) => {
+  `
     This function will send a request to the TMDB api to grab all details pertaining
     a movie matching the movieId parameter
     https://developer.themoviedb.org/reference/movie-details
-    `
-    const { data } = await api.get(`movie/${movieId}`)
-    return data
-}
+    `;
+  const { data } = await api.get(`movie/${movieId}`);
+  return data;
+};
 
 export const getHomeGenreFilms = async () => {
   let genres = await getGenres();
   let genreAndFilms = await Promise.all(
-    genres.map(async (genre) => ({
-      ...genre,
-      films: await getFilmsForGenre(genre.id),
-    }))
+    genres.map(async (genre) => {
+      const films = await getFilmsForGenre(genre.id);
+      return {
+        ...genre,
+        films: films[0],
+      };
+    })
   );
   return genreAndFilms;
+};
+
+export const searchForFilm = async (searchParam, pageNum = 1) => {
+  let cleanSearchParam = searchParam.split(" ").join("+");
+  let { data } = await api.get(
+    `https://api.themoviedb.org/3/search/movie?query=${cleanSearchParam}&page=${pageNum}`
+  );
+  const { results, total_pages } = data;
+  return [results, total_pages];
 };
