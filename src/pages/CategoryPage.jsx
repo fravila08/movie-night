@@ -1,40 +1,36 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams, useFetcher } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getFilmsForGenre } from "../utilities";
 import MovieIcon from "../components/MovieIcon";
 
 const CategoryPage = () => {
   const { genreId } = useParams();
   const [page, setPage] = useState(2);
-  const [maxPage, setMaxPage] = useState(useLoaderData()[1]);
-  const [films, setFilms] = useState(useLoaderData()[0]);
-  const fetcher = useFetcher();
+  const [maxPage, setMaxPage] = useState(0);
+  const [films, setFilms] = useState([]);
 
   const getMoreMovies = async () => {
-    const newFilms = await getFilmsForGenre(genreId, page);
-    console.log(page, maxPage);
-    setFilms([...films, ...newFilms[0]]);
+    const [newFilms, highestPage] = await getFilmsForGenre(genreId, page);
+    setFilms([...films, ...newFilms]);
     setPage(page + 1);
   };
 
   useEffect(() => {
-    fetcher.load(`/genres/${genreId}`);
-    setPage(2);
-  }, [genreId]);
-
-  useEffect(() => {
-    if (fetcher.data) {
-      const [newFilms, newMaxPage] = fetcher.data;
-      setFilms(newFilms);
-      setMaxPage(newMaxPage);
+    setPage(2)
+    const initData = async()=> {
+        const [newFilms, highestPage] = await getFilmsForGenre(genreId)
+        setFilms(newFilms)
+        setMaxPage(highestPage)
     }
-  }, [fetcher.data]);
+    initData()
+  }, [genreId]);
+  
 
   return (
     <>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "5vmin" }}>
         {films.map((film) => (
-          <MovieIcon film={film} />
+          <MovieIcon film={film} key={film.id}/>
         ))}
       </div>
       {page < maxPage ? (

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import ListGroup from "react-bootstrap/ListGroup";
 import { getGenres } from "../utilities";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 function NavBar({ show, handleClose }) {
   const [genres, setGenres] = useState([]);
@@ -23,13 +24,14 @@ function NavBar({ show, handleClose }) {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ListGroup variant="flush">
+            <SearchBar handleClose={handleClose}/>
             <Link to={`/films/`} onClick={handleClose}>
                 <ListGroup.Item >
                   Home
                 </ListGroup.Item>
               </Link>
             {genres.map((genre) => (
-              <Link to={`/genres/${genre.id}/`} onClick={handleClose}>
+              <Link to={`/genres/${genre.id}/`} onClick={handleClose} key={genre.id}>
                 <ListGroup.Item >
                   {genre.name}
                 </ListGroup.Item>

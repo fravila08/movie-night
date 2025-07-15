@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const MovieIcon = ({ film }) => {
-  const { title, poster_path } = film;
+  const { poster_path } = film;
   const navigate = useNavigate()
 
   const handleClick = () =>{

@@ -7,7 +7,7 @@ const MovieScroll = ({genre}) => {
         <h3>{name}</h3>
         <div className="movie-scroll">
             {films.map((film)=>(
-                <MovieIcon film={film}/>
+                <MovieIcon film={film} key={film.id}/>
             ))}
         </div>
         </>

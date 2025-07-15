@@ -29,11 +29,7 @@ export const router = createBrowserRouter([{
         },
         {
             path:"genres/:genreId/",
-            element: <CategoryPage />,
-            loader: async({params})=> {
-                const {genreId} = params;
-                return await getFilmsForGenre(genreId)
-            }
+            element: <CategoryPage />
         }
     ]
 }])

@@ -5,10 +5,6 @@ import Card from "react-bootstrap/Card";
 const DetailPage = () => {
   const [movie, setMovie] = useState(useLoaderData());
 
-  useEffect(() => {
-    console.log(movie);
-  }, []);
-
   return (
     <Card >
       <Card.Img
