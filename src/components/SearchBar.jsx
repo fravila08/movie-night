@@ -1,12 +1,14 @@
 import { InputGroup, Form } from "react-bootstrap"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const SearchBar = ({handleClose}) => {
     const [userInput, setUserInput] = useState("")
+    const navigate = useNavigate()
 
     const handleSubmit = async(event)=> {
         event.preventDefault()
-        console.log(userInput)
+        navigate(`/search/${userInput}/`)
         setUserInput("")
         handleClose()
     }

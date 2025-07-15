@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getFilmsForGenre } from "../utilities";
 import MovieIcon from "../components/MovieIcon";
 
-const CategoryPage = () => {
-  const { genreId } = useParams();
+const CategoryResultsPage = ({dataLoader, paramState}) => {
   const [page, setPage] = useState(2);
   const [maxPage, setMaxPage] = useState(0);
   const [films, setFilms] = useState([]);
 
   const getMoreMovies = async () => {
-    const [newFilms, highestPage] = await getFilmsForGenre(genreId, page);
+    const [newFilms, highestPage] = await dataLoader(paramState, page);
     setFilms([...films, ...newFilms]);
     setPage(page + 1);
   };
@@ -18,12 +15,12 @@ const CategoryPage = () => {
   useEffect(() => {
     setPage(2)
     const initData = async()=> {
-        const [newFilms, highestPage] = await getFilmsForGenre(genreId)
+        const [newFilms, highestPage] = await dataLoader(paramState)
         setFilms(newFilms)
         setMaxPage(highestPage)
     }
     initData()
-  }, [genreId]);
+  }, [paramState]);
   
 
   return (
@@ -40,4 +37,4 @@ const CategoryPage = () => {
   );
 };
 
-export default CategoryPage;
+export default CategoryResultsPage;

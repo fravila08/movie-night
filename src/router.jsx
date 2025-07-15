@@ -4,7 +4,7 @@ import UserPage from "./pages/UserPage";
 import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
 import { getFilmsForGenre, getHomeGenreFilms, getMovieDetails } from "./utilities";
-import CategoryPage from "./pages/CategoryPage";
+import CatResWrapper from "./pages/CatResWrapper";
 
 export const router = createBrowserRouter([{
     path:'',
@@ -29,7 +29,11 @@ export const router = createBrowserRouter([{
         },
         {
             path:"genres/:genreId/",
-            element: <CategoryPage />
+            element: <CatResWrapper />
+        },
+        {
+            path:"search/:query/",
+            element: <CatResWrapper/>
         }
     ]
 }])
