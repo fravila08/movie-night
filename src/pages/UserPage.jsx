@@ -1,14 +1,14 @@
-import { useState } from "react"
+import {  useState } from "react"
 import UserIcon from "../components/UserIcon"
+import { useLoaderData } from "react-router-dom"
 
 const UserPage = () => {
-    const [users, setUsers] = useState([
-        {userIcon:"#", userName:"New User", userToken:null}
-    ])
+    const [users, setUsers] = useState(useLoaderData())
+
     return (
         <div id="user-page">
-            {users.map((user)=>(
-                <UserIcon user = {user}/>
+            {users.map((user, idx)=>(
+                <UserIcon user = {user} key={idx}/>
             ))}
         </div>
     )

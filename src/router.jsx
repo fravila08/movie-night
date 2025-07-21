@@ -3,8 +3,9 @@ import App from "./App";
 import UserPage from "./pages/UserPage";
 import HomePage from "./pages/HomePage";
 import DetailPage from "./pages/DetailPage";
-import { getFilmsForGenre, getHomeGenreFilms, getMovieDetails } from "./utilities";
+import { getHomeGenreFilms, getMovieDetails } from "./utilities";
 import CatResWrapper from "./pages/CatResWrapper";
+import { getExistingUsers } from "./userUtilities";
 
 export const router = createBrowserRouter([{
     path:'',
@@ -12,7 +13,8 @@ export const router = createBrowserRouter([{
     children:[
         {
             index:true,
-            element: <UserPage/>
+            element: <UserPage/>,
+            loader: getExistingUsers
         },
         {
             path:"films/",

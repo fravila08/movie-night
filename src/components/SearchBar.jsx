@@ -16,7 +16,7 @@ const SearchBar = ({handleClose}) => {
     return (
         <Form onSubmit={(event)=>handleSubmit(event)}>
             <InputGroup className="mb-3">
-                <InputGroup.Text id="basic-addon1">🔍</InputGroup.Text>
+                <InputGroup.Text id="basic-addon1" onClick={(e)=>handleSubmit(e)}>🔍</InputGroup.Text>
                 <Form.Control
                 placeholder="Searching for a movie?"
                 aria-label="userInput"

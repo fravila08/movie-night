@@ -1,6 +1,6 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import {  useEffect, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import { Button } from 'react-bootstrap'
@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap'
 
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [selectedUser, setSelectedUser] = useState(null)
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -17,21 +17,23 @@ function App() {
   const location = useLocation()
 
   const handleUser = () => {
-    if (!user && location.pathname !== '' ){
+    if (!selectedUser && location.pathname !== '' ){
       navigate("")
     }
   }
 
+
   useEffect(()=>{
-    // TBDAuthentication()
-  },[])
+    handleUser()
+    console.log(selectedUser)
+  }, [selectedUser])
 
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
         Launch
       </Button>
-      <Outlet context={{user, setUser}}/>
+      <Outlet context={{selectedUser, setSelectedUser}}/>
       <NavBar show={show} handleClose={handleClose} />
     </>
   )

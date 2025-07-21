@@ -1,5 +1,4 @@
 import axios from "axios";
-import genreFilms from "./fake_data.json";
 
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
@@ -33,7 +32,7 @@ export const getFilmsForGenre = async (genreId, pageNum = 1) => {
   https://developer.themoviedb.org/reference/discover-movie
   `;
   const { data } = await api.get(
-    `discover/movie?include_adult=true&include_video=true&language=en-US&page=${pageNum}&sort_by=popularity.desc&with_genres=${genreId}`
+    `discover/movie?include_adult=false&include_video=true&language=en-US&page=${pageNum}&sort_by=popularity.desc&with_genres=${genreId}`
   );
   return [data.results, data.total_pages];
 };
